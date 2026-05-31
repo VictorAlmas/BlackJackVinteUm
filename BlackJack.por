@@ -31,24 +31,22 @@ programa
 						
 						} senao se(Sua_Mao > Mao_Dele) {
 							Mao_Dele = Mao_Dele + sorteia(1, 10)
-							escreva("Tu tem ", Sua_Mao , " e ele tem " , Mao_Dele , ". Deseja Continuar? ( 1 - Continuar, 2 - Parar) \n")
-							leia(Opcao)
-							limpa()
+							
 								
 								
-								se(Mao_Dele > 21) {
+							} se(Mao_Dele > 21) {
 									escreva("Tu ganhou, ele passou de 21\n")
 									escreva("Tu tem ", Sua_Mao , " e ele tem " , Mao_Dele , ".")
 									pare
 									
-								}
+								
 										
-									} senao {
-										escreva("Tu tem ", Sua_Mao , " e ele tem " , Mao_Dele , ". Deseja Continuar? ( 1 - Continuar, 2 - Parar) \n")
-										leia(Opcao)
-										limpa()
+								} senao {
+									escreva("Tu tem ", Sua_Mao , " e ele tem " , Mao_Dele , ". Deseja Continuar? ( 1 - Continuar, 2 - Parar) \n")
+									leia(Opcao)
+									limpa()	
 									
-									}		
+								}		
 							
 		} enquanto (Opcao == 1)
 
@@ -62,6 +60,10 @@ programa
 						} senao se (Mao_Dele > Sua_Mao) {
 							escreva("Ele ganhou\n")
 							escreva("Tu tem ", Sua_Mao , " e ele tem " , Mao_Dele , ".")
-						}		
+							
+							} senao {
+								escreva("Empatou")
+								
+							}
 	}
 }
